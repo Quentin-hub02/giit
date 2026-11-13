@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoPrestige - Vente de voitures</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+header {
+    background: #080808;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #e63946;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+.hero {
+    height: 450px;
+    background: linear-gradient(#0008,#0009),
+    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #e63946;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+
+.cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #202020;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #e63946;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.info p {
+    color: #bbb;
+    margin-bottom: 8px;
+}
+
+.contact {
+    text-align: center;
+    background: #1d1d1d;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #080808;
+    color: #888;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav a {
+        margin: 8px;
+    }
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AUTO PRESTIGE</div>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#voitures">Voitures</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="accueil">
+    <h1>Trouvez votre voiture idéale</h1>
+    <p>Découvrez notre sélection de voitures exceptionnelles.</p>
+    <a href="#voitures" class="btn">Voir nos voitures</a>
+</div>
+
+<section id="voitures">
+    <h2>Nos voitures</h2>
+
+    <div class="cars">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800">
+            <div class="info">
+                <h3>BMW Série 3</h3>
+                <p>Année : 2022</p>
+                <p>Carburant : Diesel</p>
+                <p>Kilométrage : 35 000 km</p>
+                <div class="price">29 900 €</div>
+                <a href="#contact" class="btn">Contacter</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800">
+            <div class="info">
+                <h3>Mercedes Classe C</h3>
+                <p>Année : 2023</p>
+                <p>Carburant : Essence</p>
+                <p>Kilométrage : 20 000 km</p>
+                <div class="price">35 500 €</div>
+                <a href="#contact" class="btn">Contacter</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800">
+            <div class="info">
+                <h3>Porsche 911</h3>
+                <p>Année : 2021</p>
+                <p>Carburant : Essence</p>
+                <p>Kilométrage : 18 000 km</p>
+                <div class="price">89 900 €</div>
+                <a href="#contact" class="btn">Contacter</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Vous avez trouvé votre bonheur ? Contactez notre équipe !</p>
+    <a href="mailto:contact@autoprestige.fr" class="btn">
+        Nous contacter
+    </a>
+</section>
+
+<footer>
+    © 2026 AutoPrestige - Tous droits réservés
+</footer>
+
+</body>
+</html>
